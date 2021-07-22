@@ -1,6 +1,3 @@
-import { createFragmentContainer, graphql } from "react-relay";
-import { useState } from "react";
-// import WebsiteContentListItem from "./WebsiteContentListItem";
 import styles from "src/styles/components/organisms/ContentList.module.scss";
 import TableWrapper from "src/components/molecules/TableWrapper";
 import Link from "next/link";
@@ -9,7 +6,7 @@ type Props = {};
 
 // ウェブサイトコンテンツリスト
 const ContentList: React.FC<Props> = (props) => {
-  const [isLoading, setLoading] = useState(false);
+
   return (
     <section className={styles.websiteContentList}>
       <header>

@@ -1,0 +1,149 @@
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 801;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
+  padding: 10px;
+  @media (min-width: 960px) {
+    padding: 60px;
+  }
+  .wrapperInner {
+    display: flex;
+    flex-flow: column;
+    max-height: calc(100vh - 120px);
+    border-radius: 12px;
+    overflow: auto;
+    position: relative;
+    background: #fff;
+    flex-direction: column;
+    width: 100%;
+    @media (min-width: 960px) {
+      width: 600px;
+    }
+    .header {
+      z-index: 1;
+      flex-basis: 72px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      background-color: #fff;
+      padding: 0 16px;
+      display: flex;
+      flex: auto 0 0;
+      width: 100%;
+      .title {
+        text-align: center;
+        width: calc(100% - 96px);
+        margin: 0;
+        padding: 20px 6px;
+        font-weight: 600;
+        letter-spacing: 0.003em;
+        font-size: 16px;
+        line-height: 1.999;
+        margin-right: 0px;
+        @media (min-width: 960px) {
+          font-size: 24px;
+          line-height: 1.333;
+          margin-right: 48px;
+        }
+      }
+      .close {
+        padding: 12px 8px;
+        display: flex;
+        flex: auto 0 0;
+        flex: 33% 1 1;
+        line-height: 2.2;
+        .closeButton {
+          min-width: 48px;
+          font-size: 0;
+          height: 48px;
+          width: 48px;
+          border-radius: 6px;
+          background: rgba(0, 0, 0, 0.05);
+          border: none;
+          color: rgba(0, 0, 0, 0.55);
+          position: relative;
+          font-weight: 500;
+          text-align: center;
+          transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+            opacity 0.2s ease-in-out;
+          user-select: none;
+          cursor: pointer;
+          &:hover,&:focus {
+            background: #ebf8ff;
+          }
+          .closeIcon {
+            width: 22px;
+            height: 22px;
+            vertical-align: middle;
+            display: inline-block;
+            margin: auto;
+          }
+        }
+      }
+    }
+    .modalContent {
+      flex: 1 1 auto;
+      padding: 24px;
+      overflow: auto;
+      .modalFooter {
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 12px 24px;
+        z-index: 1;
+        flex: none;
+        align-items: stretch;
+        .cancelButton {
+          margin-right: 16px;
+          position: relative;
+          height: auto;
+          min-width: auto;
+          padding: 13px 16px;
+          line-height: 1.5714285714;
+          background: rgba(0, 0, 0, 0.05);
+          border: none;
+          color: #49a4d5;
+          border-radius: 6px;
+          font-size: 14px;
+          font-weight: 500;
+          text-align: center;
+          transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+            opacity 0.2s ease-in-out;
+          user-select: none;
+          cursor: pointer;
+          &:hover,&:focus {
+            background: #ebf8ff;
+          }
+        }
+        .deleteButton {
+          line-height: 1.5714285714;
+          background: #cd4435;
+          border: none;
+          color: #fff;
+          margin-left: auto;
+          position: relative;
+          height: auto;
+          min-width: auto;
+          padding: 13px 16px;
+          border-radius: 6px;
+          font-size: 14px;
+          font-weight: 500;
+          text-align: center;
+          transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+            opacity 0.2s ease-in-out;
+          user-select: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

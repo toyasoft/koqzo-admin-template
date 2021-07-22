@@ -1,9 +1,8 @@
 import { ReactNode, useEffect, useRef, useState } from "react";
 import CloseIcon from "src/components/icons/CloseIcon";
-import Loading from "src/components/molecules/Loading";
-import Flash from "src/components/molecules/Flash";
+import Flash from "src/components/templates/Flash";
 import { FormikErrors, FormikTouched } from "formik";
-import CompleteFlash from "src/components/molecules/CompleteFlash";
+import CompleteFlash from "src/components/templates/CompleteFlash";
 
 type Props = {
   children: ReactNode;

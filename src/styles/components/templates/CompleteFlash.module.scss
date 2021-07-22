@@ -1,0 +1,36 @@
+.flash {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  background: #26b223;
+  height: auto;
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  z-index: 20000;
+  // transition: opacity 0.2s linear, background-color 0.2s ease-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 16px rgba(0, 0, 0, 0.1);
+  // position: relative;
+  color: #fff;
+  overflow: hidden;
+  animation: fadeOut 1s ease 1s forwards;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    line-height: 24px;
+    li {
+      font-size: 14px;
+    }
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

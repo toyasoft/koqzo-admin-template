@@ -1,0 +1,23 @@
+.flash {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  background: #cd4435;
+  height: auto;
+  opacity: 1;
+  transition: opacity 0.2s linear, background-color 0.2s ease-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 16px rgba(0, 0, 0, 0.1);
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    line-height: 24px;
+    li {
+      font-size: 14px;
+    }
+  }
+}

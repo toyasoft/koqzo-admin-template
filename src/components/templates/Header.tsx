@@ -16,17 +16,8 @@ const Header: React.FC<Props> = (props) => {
   const router = useRouter();
   const [isSignoutOpened, setSignoutOpened] = useState(false);
   const [isMenuOpened, setMenuOpened] = useState(false);
-
   const ref = useRef(null);
-
   useOutsideClickHandler(ref, setSignoutOpened);
-  // useEffect(() => {
-  //   Auth.currentSession().then((res) => {
-  //     console.log(res);
-  //   }).catch((err) => {
-  //     console.log(err)
-  //   });
-  // },[])
   
 
   return (

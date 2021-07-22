@@ -10,8 +10,6 @@ type Props = {
 
 // 管理者レイアウト
 const Layout: React.FC<Props> = (props) => {
-  const router = useRouter();
-  const { scrollbar } = useContext(ScrollbarContext);
 
   return (
     <div className={`${styles.layout}`}>
