@@ -1,0 +1,37 @@
+.menu {
+  padding: 24px 0;
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  display: none;
+  @media (min-width: 960px) {
+    width: 200px;
+    display: block;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      a {
+        padding: 13px 0 13px 24px;
+        line-height: 22px;
+        display: block;
+        text-decoration: none;
+        color: #1a1a1a;
+        &:hover {
+          color: #49a4d5;
+        }
+      }
+    }
+    .here {
+      a {
+        color: #49a4d5;
+        background: #ebf8ff;
+      }
+    }
+  }
+}

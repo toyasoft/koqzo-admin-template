@@ -1,0 +1,66 @@
+.drawerMenu {
+  transform: translate3d(0, 0, 0);
+  visibility: hidden;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 10%), 0 0 1px rgb(0 0 0 / 20%);
+  position: fixed;
+  z-index: 100;
+  top: 56px;
+  left: -320px;
+  bottom: 0;
+  width: 320px;
+  background: #fff;
+  color: #b3b3b3;
+  transition: transform 250ms, visibility 250ms;
+  .content {
+    height: 100%;
+    overflow-y: auto;
+    .grid {
+      padding: 24px 0;
+      font-size: 16px;
+      .section {
+        padding-bottom: 0;
+        width: 100%;
+        ul {
+          min-height: 40px;
+          margin: 0;
+          padding: 0;
+          list-style: none outside;
+          li {
+            line-height: 0;
+            transform: scale(1);
+            margin: 0;
+            padding: 0;
+            list-style: none outside;
+            a {
+              width: 100%;
+              padding: 0 24px;
+              height: 40px;
+              line-height: 40px;
+              display: flex;
+              transition: transform 0.2s
+                cubic-bezier(0.005, 1.425, 0.755, 1.235);
+              transform-origin: center center;
+              text-decoration: none;
+              font-weight: 500;
+              color: #737373;
+              &:hover {
+                color: #49a4d5;
+              }
+            }
+          }
+          .here {
+            a {
+              color: #49a4d5;
+              background: #ebf8ff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.drawerOpened {
+  transform: translate3d(320px, 0, 0);
+  visibility: visible;
+}

@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  admin:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    # command: sh -c "yarn && yarn dev -p 8080"
+    ports:
+      - "8080:8080"
+    image: next:latest

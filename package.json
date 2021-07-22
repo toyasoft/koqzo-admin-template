@@ -1,0 +1,39 @@
+{
+  "name": "koqzo-admin-template",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "private": true,
+  "author": {
+    "name": "KOQZO",
+    "email": "info@koqzo.com",
+    "url": "https://www.koqzo.com"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p $PORT",
+    "relay": "get-graphql-schema --header 'X-Api-Key=********' https://********.appsync-api.ap-northeast-1.amazonaws.com/graphql > schema.graphql && relay-compiler --src ./src/ --exclude '**/.next/**' '**/node_modules/**' '**/test/**'  '**/__generated__/**' --exclude '**/schema/**' --schema schema.graphql --language typescript --customScalars.ISO8601DateTime=String --artifactDirectory ./src/__generated__"
+  },
+  "dependencies": {
+    "aws-amplify": "^4.2.0",
+    "dayjs": "^1.10.6",
+    "formik": "^2.2.9",
+    "graphql": "^15.5.1",
+    "js-cookie": "^2.2.1",
+    "next": "^11.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-relay": "^11.0.2",
+    "sass": "^1.35.2",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.0",
+    "@types/react": "^17.0.14",
+    "babel-plugin-relay": "^11.0.2",
+    "get-graphql-schema": "^2.1.2",
+    "relay-compiler": "^11.0.2",
+    "relay-compiler-language-typescript": "^14.0.0",
+    "typescript": "^4.3.5"
+  }
+}
